@@ -3,17 +3,15 @@ Website for PGD-Lukovek build with Laravel 7.x in Vuejs.
 > 
 
 ## Build Setup
-```bash
-composer require laravel/ui
-
-php artisan ui vue --auth
-```
-
 
 
 ``` bash
 # install dependencies for back-end (php)
 composer install
+
+```bash
+composer require laravel/ui
+php artisan ui vue --auth
 
 # migrate and seed
 php artisan migrate --seed
