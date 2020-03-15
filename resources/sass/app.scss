@@ -1,0 +1,56 @@
+
+// Font Awesome 
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+// Za nogo
+$footer-padding: 48px 24px 0px 24px;
+
+// Besedilo v meniju, neaktivni
+$navbar-item-color: white;
+// Besedilo v meniju, aktivni
+$navbar-item-active-color: $grey-dark;
+// Barva vrstice
+$navbar-background-color: $red;
+// Ozadje, aktivni
+$navbar-item-active-background-color: white;
+// Ozadje, hover
+$navbar-item-hover-background-color: hsl(0, 0%, 96%);
+// Besedilo, hover
+$navbar-item-hover-color: $grey-dark;
+// Puscica za dropdown
+$navbar-dropdown-arrow: $grey-dark;
+// Besedilo, hover, dropdown
+$navbar-dropdown-item-hover-color: $grey-dark;
+// Besedilo, dropdown, aktivni
+$navbar-dropdown-item-active-color: $grey-dark;
+// Ozadje, dropdown
+$navbar-dropdown-background-color: white;
+
+// Besedilo, dropdown
+.navbar-dropdown .navbar-item {
+    color: $grey-dark;
+}
+
+// Manj oglati meniji
+.navbar-item {
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 6px 6px 0 0;
+}
+
+// Bulma
+@import "~bulma/bulma.sass";
+
+.image {
+    border: 1px solid #DDD;
+    padding: 5px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
