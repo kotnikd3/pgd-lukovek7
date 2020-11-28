@@ -1,9 +1,13 @@
 # PGD-Lukovek
+
+## About the project
 Website for PGD-Lukovek build with Laravel 7.x in Vuejs 2.x.  
 Free to use.
+![logo](Documentation/lukovek.png)
+
 > 
 
-## Build Setup
+## Build
 
 
 ``` bash
@@ -31,5 +35,3 @@ npm run watch-poll
 
 # DB username/password: secret / secret123 
 ```
-
-![logo](Documentation/lukovek.png)
