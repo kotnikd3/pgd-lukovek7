@@ -83,7 +83,7 @@
         <div class="column is-4-tablet is-3-desktop">
             <!-- Panel pozarna ogrozenost ARSO -->
             <nav class="panel">
-                <p class="panel-heading">Požarna ogroženost v Sloveniji ARSO</p>
+                <p class="panel-heading">Požarna ogroženost</p>
                 <div class="panel-block">
                     <figure>
                         <a href="http://meteo.arso.gov.si/met/sl/warning/fire/">
@@ -95,7 +95,7 @@
             </nav>
             <!-- Panel vremenska napoved ARSO -->
             <nav class="panel">
-                <p class="panel-heading">Vremenska napoved ARSO</p>
+                <p class="panel-heading">Vremenska napoved</p>
                 <p class="panel-tabs">
                     <a :class="{ 'is-active' : tabWeather == 'danes' }" @click="tabWeather = 'danes'">Danes</a>
                     <a :class="{ 'is-active' : tabWeather == 'jutri_dop' }" @click="tabWeather = 'jutri_dop'">Jutri zjutraj</a>

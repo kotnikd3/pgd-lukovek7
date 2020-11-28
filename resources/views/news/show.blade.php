@@ -12,7 +12,7 @@
                         <!-- 18. april 2019 -->
                     </div>
                     <div class="level-item">
-                        <tag margin initialsize="is-normal" initialnewstype="{{ $news->type }}"></tag>
+                        <tag margin initialnewstype="{{ $news->type }}"></tag>
                     </div>
                 </nav>
             </h2>

@@ -44,6 +44,7 @@ Vue.component('confirmbutton', require('./components/ConfirmButton.vue').default
 Vue.component('addimages', require('./components/AddImages.vue').default);
 Vue.component('lightbox', require('./components/Lightbox.vue').default);
 Vue.component('tag', require('./components/Tag.vue').default);
+Vue.component('fileupload', require('./components/FileUpload.vue').default);
 
 const app = new Vue({
     el: '#app',

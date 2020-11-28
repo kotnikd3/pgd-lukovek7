@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- Delete modal -->
+        <!-- Confirm modal for deleting the news. -->
         <div v-if="selectedCard" :class="['modal', { 'is-active': selectedCard }]">
             <div class="modal-background" @click="selectCard(null)"></div>
             <div class="modal-card">
@@ -31,7 +31,7 @@
         <!-- Errors -->
         <div v-if="error" class="columns is-centered">
             <div class="column is-half-desktop has-text-centered">
-                <div class="notification is-danger">
+                <div class="notification is-danger is-light">
                     <h1 class="title">Napaka pri pridobivanju novic. Status: {{ error.status }}</h1>
                     <h2 class="subtitle" v-text="error.data.exception"></h2>
                 </div>
@@ -41,7 +41,7 @@
         <!-- Deleted news -->
         <div v-if="lastDeletedTitle" class="columns is-centered">
             <div class="column is-half-desktop has-text-centered">
-                <div class="notification is-warning">
+                <div class="notification is-warning is-light">
                     <button class="delete" @click="lastDeletedTitle = null"></button>
                     Novica z naslovom <strong>{{ lastDeletedTitle }}</strong> izbrisana.
                 </div>
@@ -51,11 +51,8 @@
         <!-- Create new news -->
         <div v-if="user && !loading && !error" class="columns is-centered">
             <article class="message is-success column is-half-desktop">
-                <div class="message-header">
-                    <p>Objavi novico kot <span class="is-italic">{{ user | fullName }}.</span></p>
-                </div>
                 <div class="message-body">
-                    <a href="/news/create" class="button is-success is-fullwidth is-outlined">Nova</a>
+                    <a href="/news/create" class="button is-success is-fullwidth"><p>Objavi novico kot <span class="is-italic">{{ user | fullName }}.</span></p></a>
                 </div>
             </article>
         </div>
@@ -67,6 +64,7 @@
                     <a class="povezava" :href="'/news/' + news_ins.id"></a>
                     <!-- <figure v-if="news_ins.cover_image" :class="['image is-4by3', { 'image-blur' : isHovered(news_ins) }]"> -->
                     <figure :class="[{ 'image-blur' : isHovered(news_ins) }]">
+                        <!-- <a class="povezava" :href="'/news/' + news_ins.id"></a> -->
                         <img v-if="news_ins.cover_image" :src="news_ins.cover_image" alt="Slika dogodka">
                         <img v-else src="images/lotus_logo.png" alt="logo">
                     </figure>
@@ -85,8 +83,8 @@
                         </div>
                     </div>
                     <footer class="card-footer">
-                        <a v-if="news_ins.can_update" class="card-footer-item button is-info is-outlined" :href="'/news/' + news_ins.id + '/edit'">Uredi</a>
-                        <a v-if="news_ins.can_delete" class="card-footer-item button is-danger is-outlined" @click="selectCard(news_ins)">Izbriši</a>                        
+                        <a v-if="news_ins.can_update" class="card-footer-item button is-info is-light" :href="'/news/' + news_ins.id + '/edit'">Uredi</a>
+                        <a v-if="news_ins.can_delete" class="card-footer-item button is-danger is-light" @click="selectCard(news_ins)">Izbriši</a>                        
                     </footer>
                 </div>
             </div>
@@ -111,7 +109,7 @@
 </template>
 
 <script>
-    import moment from 'moment';
+    import moment from 'moment/moment';
 
     export default {
         mounted() {

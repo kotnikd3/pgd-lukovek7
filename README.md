@@ -1,5 +1,6 @@
 # PGD-Lukovek
-Website for PGD-Lukovek build with Laravel 7.x in Vuejs.
+Website for PGD-Lukovek build with Laravel 7.x in Vuejs 2.x.  
+Free to use.
 > 
 
 ## Build Setup
@@ -27,4 +28,8 @@ npm run dev
 
 # build front-end with hot-reload
 npm run watch-poll
+
+# DB username/password: secret / secret123 
 ```
+
+![logo](Documentation/lukovek.png)

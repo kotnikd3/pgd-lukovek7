@@ -1,0 +1,18 @@
+- prikaz slik v novicah: slike naj bodo vedno enake (razumljive) velikosti, ne glede na to, kakšne dimenzije so?
+
+- Slika v naslovu
+
+- Nalaganje datotek
+    - gumb "Javno": nekatere datoteke so samo za prijavljene uporabnike, nekatere pa za javnost
+
+- Prestavitev programske logike iz /news/show.blade.php v kontroler v medoto show.
+
+- Gumb za filtriranje novic na prvi strani, torej da se prikažejo le npr. intervencije, vaje itd.
+Naredi na frontendu v News.vue z metodo filter?
+Verjetno bo potrebno tudi na backendu.
+
+
+- Papirologija:
+    - da je Denis Kotnik to spletno stran doniral in ni zaslužil popolnoma nič
+    - da vsi podpišejo, da se strinjajo, da so email naslovi shranjeni v sistemu
+    - vsi računa za storitve (strežnik, domena itd.) 

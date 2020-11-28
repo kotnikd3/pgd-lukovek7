@@ -9,12 +9,12 @@
         data() {
             return {
                 tags: {
-                    'Obvestilo' : 'is-light',
+                    'Obvestilo' : 'is-info',
                     'Intervencija' : 'is-danger',
-                    'Tekmovanje' : 'is-info',
+                    'Tekmovanje' : 'is-primary',
                     'Vaja' : 'is-primary',
                     'Dogodek' : 'is-success',
-                    'Ostalo' : 'is-warning'
+                    'Ostalo' : 'is-info'
                 },
                 size: this.initialsize,
                 newstype: this.initialnewstype
@@ -37,11 +37,12 @@
         },
         computed: {
             color: function() {
-                var color = 'tag is-light';
+                var color = 'tag REPLACE is-light';
+                var colorType = 'is-info';
                 if (this.newstype in this.tags) {
-                    color = 'tag ' + this.tags[this.newstype] + ' ' + this.size;
+                    colorType = this.tags[this.newstype] + ' ' + this.size;
                 }
-                return color;
+                return color.replace('REPLACE', colorType);
             }
         },
         created() {

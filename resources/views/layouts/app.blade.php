@@ -45,6 +45,9 @@
                         <router-link to="/about" exact tag="a" class="navbar-item">
                             O društvu
                         </router-link>
+                        <router-link to="/files" exact tag="a" class="navbar-item">
+                            Datoteke
+                        </router-link>
                         <div class="navbar-item has-dropdown is-hoverable">
                             <router-link to="/dwad" tag="a" class="navbar-item navbar-link">
                                 Novice
@@ -140,7 +143,7 @@
                 <div class="columns is-centered has-text-centered">
                     <div class="column">
                         <span class="has-text-grey-light">
-                            <span class="icon"><i class="far fa-copyright"></i></span>2019 PGD Lukovek.
+                            <span class="icon"><i class="far fa-copyright"></i></span>{{ now()->year }} PGD Lukovek.
                             Vse pravice pridržane. Izdelava <a class="has-text-grey-light" href="https://www.kotnik.si"><i>www.kotnik.si</i></a>
                         </span>
                     </div>

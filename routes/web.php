@@ -25,6 +25,10 @@ Route::resource('/users', 'UsersController')->only([
     'index', 'edit', 'update', 'destroy'
 ]);
 
+Route::resource('/files', 'FilesController')->only([
+    'index', 'store', 'destroy'
+]);
+
 // Hack: kompromis med Vue Router in Laravel router.
 Route::get('/{any}', function() {
     return view('home');

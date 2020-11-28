@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Mail;
+// use Illuminate\Support\Facades\Mail;
 
 class NewsController extends Controller
 {
@@ -17,7 +17,8 @@ class NewsController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->except(['index', 'show']);
-        $this->middleware('can:update,news')->only(['edit', 'update', 'destroy']);
+        $this->middleware('can:update,news')->only(['edit', 'update']);
+        $this->middleware('can:delete,news')->only(['destroy']);
     }
     
     /**
@@ -55,10 +56,9 @@ class NewsController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255', 'min:5'],
             'body' => ['required', 'string', 'max:2000', 'min:10'],
-            'pictures.*' => ['mimes:jpeg,png,jpg', 'max:8192'], // Najvec 8 MB.
+            'pictures.*' => ['mimes:jpeg,png,jpg', 'max:8192'], // Najvec 8 MB. Dodatna varnostna pregrada je v Nginx: /etc/nginx/nginx.conf
             'type' => ['required']
         ]);
-
 
         $news = News::create([
             'title' => $request['title'],
@@ -80,7 +80,7 @@ class NewsController extends Controller
             // Skozi vse slike.
             foreach ($request->file('pictures') as $file) {
                 $fileName = $file->getClientOriginalName();
-                $fileExt = $file->getClientOriginalExtension();
+                //$fileExt = $file->getClientOriginalExtension();
                 // Shrani sliko v ustrezen direktorij.
                 Storage::disk('public')->put('news/' . $news->id . '/' . $fileName, file_get_contents($file));
             }
