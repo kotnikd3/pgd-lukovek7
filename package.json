@@ -23,7 +23,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.13.0",
         "bulma": "^0.9.0",
-        "moment": "^2.26.0",
+        "moment": "^2.29.2",
         "vue-easy-lightbox": "^0.13.0"
     }
 }
